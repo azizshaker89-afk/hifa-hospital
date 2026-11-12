@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>مستشفى الشفاء التخصصي</title>
+<meta name="description" content="مستشفى الشفاء التخصصي — احجز موعدك مع نخبة الاستشاريين في كل التخصصات.">
+<link rel="icon" href="assets/img/logo-icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/home.css">
+<link rel="stylesheet" href="assets/css/doctors.css">
+<script>
+window.SHIFA_I18N = {
+  ar: {
+    "page.title": "الرئيسية",
+    "hero.title": "احجز موعدك مع نخبة أطبائنا",
+    "hero.lead": "أكثر من 40 تخصصًا تحت سقف واحد، ومواعيد مؤكدة بدون قوائم انتظار.",
+    "hero.tab": "احجز كشف في العيادة",
+    "hero.spec": "اختار التخصص", "hero.doctor": "اختار الطبيب (اختياري)",
+    "hero.search": "ابحث واحجز موعدك",
+    "hero.badge.n": "+120", "hero.badge.t": "استشاري متخصص",
+    "doctors.title": "أطباؤنا المتاحون للحجز",
+    "doctors.sub": "اختار طبيبك وشوف أقرب ميعاد متاح، واحجز في أقل من دقيقة.",
+    "doc.fee": "سعر الكشف", "doc.call": "اتصل للحجز", "doc.note": "تقدر تحجز كشف في العيادة أو استشارة أونلاين",
+    "doc.more": "اختار ميعاد تاني", "doc.views": "زيارة",
+    "pk.title": "باقات الفحص والعلاج المتخصصة",
+    "pk.sub": "باقات متكاملة تجمع الكشف والتحاليل والمتابعة بسعر واحد واضح.",
+    "pk.from": "يبدأ من", "pk.book": "احجز الآن",
+    "why.title": "ليه تختار مستشفى الشفاء؟",
+    "why1.t": "مواعيد مضمونة", "why1.p": "احجز ميعادك أونلاين في دقيقة، وهيكون جاهز لك بدون انتظار في الاستقبال.",
+    "why2.t": "رعاية متكاملة", "why2.p": "كشف وتحاليل وأشعة وصيدلية في مبنى واحد، مع متابعة مستمرة لحالتك.",
+    "why3.t": "أسعار واضحة", "why3.p": "سعر الكشف والباقة معروف قبل الحجز، ومفيش أي رسوم إضافية مخفية.",
+    "sv.title": "الشفاء معاك في كل خطوة",
+    "sv.clinic": "كشف في العيادة", "sv.xray": "الأشعة التشخيصية", "sv.lab": "التحاليل الطبية",
+    "sv.home": "الزيارات المنزلية", "sv.pharmacy": "الصيدلية", "sv.emergency": "طوارئ 24 ساعة",
+    "faq.title": "الأسئلة المتكررة",
+    "q1": "إزاي أحجز موعد في المستشفى؟", "a1": "اختار التخصص والطبيب من الموقع، وحدد الميعاد المناسب، واكتب بياناتك. هيوصلك تأكيد الحجز برسالة على موبايلك فورًا.",
+    "q2": "هل أقدر ألغي أو أغيّر ميعادي؟", "a2": "أيوه، تقدر تلغي أو تغيّر الميعاد مجانًا قبل الموعد بـ 6 ساعات من الرابط اللي في رسالة التأكيد.",
+    "q3": "إيه طرق الدفع المتاحة؟", "a3": "الدفع بالبطاقة البنكية أونلاين، أو المحافظ الإلكترونية، أو نقدًا في الاستقبال يوم الكشف.",
+    "q4": "هل المستشفى بيقبل التأمين الطبي؟", "a4": "بنتعامل مع أغلب شركات التأمين الطبي. اكتب اسم شركتك في الحجز وهنأكد التغطية قبل ميعادك.",
+    "q5": "مواعيد العيادات الخارجية إيه؟", "a5": "العيادات شغالة يوميًا من 9 الصبح لحد 11 بالليل، ما عدا يوم الجمعة من 2 الضهر.",
+    "q6": "هل في طوارئ 24 ساعة؟", "a6": "أيوه، قسم الطوارئ شغال 24 ساعة طول أيام الأسبوع، ومعاه خدمة إسعاف.",
+    "q7": "إزاي أستلم نتايج التحاليل والأشعة؟", "a7": "النتايج بتوصلك على الموبايل والإيميل أول ما تجهز، وتقدر تستلم نسخة مطبوعة من المستشفى."
+  },
+  en: {
+    "page.title": "Home",
+    "hero.title": "Book with our leading doctors",
+    "hero.lead": "Over 40 specialties under one roof, with confirmed appointments and no waiting lists.",
+    "hero.tab": "Book an in-clinic visit",
+    "hero.spec": "Choose a specialty", "hero.doctor": "Choose a doctor (optional)",
+    "hero.search": "Search & book your appointment",
+    "hero.badge.n": "120+", "hero.badge.t": "Specialist consultants",
+    "doctors.title": "Doctors available to book",
+    "doctors.sub": "Pick your doctor, see the earliest open slot, and book in under a minute.",
+    "doc.fee": "Consultation fee", "doc.call": "Call to book", "doc.note": "Book an in-clinic visit or an online consultation",
+    "doc.more": "Choose another time", "doc.views": "visits",
+    "pk.title": "Specialized check-up & treatment packages",
+    "pk.sub": "Complete packages that bundle the consultation, tests and follow-up at one clear price.",
+    "pk.from": "From", "pk.book": "Book now",
+    "why.title": "Why choose Al Shifa Hospital?",
+    "why1.t": "Guaranteed appointments", "why1.p": "Book online in a minute, and your slot is ready for you with no waiting at reception.",
+    "why2.t": "Complete care", "why2.p": "Clinics, labs, radiology and pharmacy in one building, with continuous follow-up on your case.",
+    "why3.t": "Clear prices", "why3.p": "You know the consultation or package price before you book, with no hidden fees.",
+    "sv.title": "Al Shifa is with you every step",
+    "sv.clinic": "In-clinic visit", "sv.xray": "Diagnostic radiology", "sv.lab": "Medical labs",
+    "sv.home": "Home visits", "sv.pharmacy": "Pharmacy", "sv.emergency": "24-hour emergency",
+    "faq.title": "Frequently asked questions",
+    "q1": "How do I book an appointment?", "a1": "Choose the specialty and doctor on the website, pick a time that suits you and enter your details. A confirmation text reaches your phone right away.",
+    "q2": "Can I cancel or change my appointment?", "a2": "Yes. You can cancel or reschedule free of charge up to 6 hours before your appointment, from the link in your confirmation text.",
+    "q3": "Which payment methods are available?", "a3": "Pay online by bank card or e-wallet, or pay in cash at reception on the day of your visit.",
+    "q4": "Does the hospital accept medical insurance?", "a4": "We work with most medical insurance companies. Enter your insurer when booking and we will confirm coverage before your visit.",
+    "q5": "What are the outpatient clinic hours?", "a5": "Clinics are open daily from 9 AM to 11 PM, and from 2 PM on Fridays.",
+    "q6": "Is there a 24-hour emergency department?", "a6": "Yes. The emergency department and ambulance service run 24 hours a day, 7 days a week.",
+    "q7": "How do I receive my lab and radiology results?", "a7": "Results are sent to your phone and email as soon as they are ready, and you can collect a printed copy at the hospital."
+  }
+};
+</script>
+</head>
+<body data-page="home">
+<header id="site-header"></header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <h1 data-i18n="hero.title"></h1>
+        <p class="hero-lead" data-i18n="hero.lead"></p>
+        <span class="hero-tab" data-i18n="hero.tab"></span>
+        <form class="hero-form" action="doctors.html">
+          <div class="select-wrap">
+            <select class="select" name="spec" id="spec-select" aria-label="specialty"></select>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg>
+          </div>
+          <button class="btn btn-cta" type="submit" data-i18n="hero.search"></button>
+        </form>
+      </div>
+      <div class="hero-media">
+        <div class="hero-circle"><img src="assets/img/hero-doctor.jpg" alt=""></div>
+        <div class="hero-badge">
+          <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="4"/><path d="M2 21c0-3.9 3.1-7 7-7s7 3.1 7 7"/><path d="m16 11 2 2 4-4"/></svg></i>
+          <div><b data-i18n="hero.badge.n"></b><span data-i18n="hero.badge.t"></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOCTORS -->
+  <section class="section section--grey" style="padding-top:20px">
+    <div class="container">
+      <h2 class="section-title" data-i18n="doctors.title"></h2>
+      <p class="section-sub" data-i18n="doctors.sub"></p>
+      <div class="carousel">
+        <button class="arrow arrow-prev" data-scroll="-1" aria-label="previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
+        <div class="track" id="doc-track"></div>
+        <button class="arrow arrow-next" data-scroll="1" aria-label="next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKAGES -->
+  <section class="section">
+    <div class="container center">
+      <h2 class="section-title" data-i18n="pk.title"></h2>
+      <p class="section-sub" data-i18n="pk.sub"></p>
+      <div class="pills" id="pk-pills" role="tablist"></div>
+      <div class="pk-grid" id="pk-grid" style="text-align:start"></div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="section section--grey">
+    <div class="container">
+      <h2 class="why-title" data-i18n="why.title"></h2>
+      <div class="why-grid">
+        <article class="why-card">
+          <svg viewBox="0 0 64 64"><rect x="8" y="12" width="48" height="44" rx="6" fill="#0B4F6C"/><rect x="8" y="12" width="48" height="12" rx="6" fill="#27B4D9"/><rect x="18" y="6" width="5" height="12" rx="2.5" fill="#0B4F6C"/><rect x="41" y="6" width="5" height="12" rx="2.5" fill="#0B4F6C"/><g fill="#fff"><rect x="15" y="30" width="7" height="6" rx="1.5"/><rect x="26" y="30" width="7" height="6" rx="1.5"/><rect x="37" y="30" width="7" height="6" rx="1.5"/><rect x="15" y="40" width="7" height="6" rx="1.5"/><rect x="26" y="40" width="7" height="6" rx="1.5"/></g><circle cx="47" cy="47" r="11" fill="#2EBD4E" stroke="#fff" stroke-width="3"/><path d="m42 47 3.5 3.5L52 44" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3 data-i18n="why1.t"></h3><p data-i18n="why1.p"></p>
+        </article>
+        <article class="why-card">
+          <svg viewBox="0 0 64 64"><path d="M32 30C22 23 17 18 17 12.5 17 8.4 20.2 5 24.3 5c3.4 0 5.7 1.9 7.7 4.6C34 6.9 36.3 5 39.7 5 43.8 5 47 8.4 47 12.5 47 18 42 23 32 30Z" fill="#E8546B"/><path d="M29 14h6M32 11v6" stroke="#fff" stroke-width="3" stroke-linecap="round"/><path d="M4 40c6-4 12-4 17 0l9 6c2 1.3 1.6 4.5-1 5H18" stroke="#F2A982" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M60 40c-6-4-12-4-17 0l-9 6c-2 1.3-1.6 4.5 1 5h11" stroke="#F2A982" stroke-width="5" fill="none" stroke-linecap="round"/><rect x="2" y="50" width="16" height="10" rx="2" fill="#27B4D9"/><rect x="46" y="50" width="16" height="10" rx="2" fill="#27B4D9"/></svg>
+          <h3 data-i18n="why2.t"></h3><p data-i18n="why2.p"></p>
+        </article>
+        <article class="why-card">
+          <svg viewBox="0 0 64 64"><circle cx="30" cy="30" r="22" fill="none" stroke="#0B4F6C" stroke-width="6"/><path d="M36 22c-1.5-2-3.6-3-6.4-3-3.6 0-6.1 2-6.1 4.8 0 6.6 13 3.6 13 10.4 0 3-2.8 5-6.7 5-3 0-5.4-1.2-7-3.4M30 15v4m0 21v4" stroke="#27B4D9" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M52 40v18m-7-7 7 7 7-7" stroke="#27B4D9" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3 data-i18n="why3.t"></h3><p data-i18n="why3.p"></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title" style="margin-bottom:34px" data-i18n="sv.title"></h2>
+      <div class="sv-grid">
+        <a class="sv-card" href="booking.html"><img src="assets/img/sv-clinic.jpg" alt=""><span data-i18n="sv.clinic"></span></a>
+        <a class="sv-card" href="departments.html"><img src="assets/img/sv-xray.jpg" alt=""><span data-i18n="sv.xray"></span></a>
+        <a class="sv-card" href="departments.html"><img src="assets/img/sv-lab.jpg" alt=""><span data-i18n="sv.lab"></span></a>
+        <a class="sv-card" href="departments.html"><img src="assets/img/sv-home.jpg" alt=""><span data-i18n="sv.home"></span></a>
+        <a class="sv-card" href="departments.html"><img src="assets/img/sv-pharmacy.jpg" alt=""><span data-i18n="sv.pharmacy"></span></a>
+        <a class="sv-card" href="contact.html"><img src="assets/img/sv-emergency.jpg" alt=""><span data-i18n="sv.emergency"></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--grey">
+    <div class="container faq-wrap">
+      <div class="faq-box">
+        <h2 class="faq-label" data-i18n="faq.title"></h2>
+        <div id="faq-list"></div>
+      </div>
+      <div class="faq-person">
+        <div class="ring"><img src="assets/img/faq-nurse.jpg" alt=""></div>
+        <div class="bulb"><svg viewBox="0 0 48 48"><path d="M24 6a13 13 0 0 0-7.6 23.6c1.5 1.1 2.6 2.8 2.6 4.6V36h10v-1.8c0-1.8 1.1-3.5 2.6-4.6A13 13 0 0 0 24 6Z" fill="#FFC93C"/><path d="M19 39h10M20 43h8" stroke="#0B4F6C" stroke-width="3" stroke-linecap="round"/><path d="M20 22c0-2.2 1.8-4 4-4" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer"></footer>
+
+<script src="assets/js/data.js"></script>
+<script>
+/* ---------- Page data ---------- */
+(function () {
+  const { IC, SPECS, DOCTORS } = window.SHIFA_DATA;
+  const CATS = [
+    ["all", { ar: "الكل", en: "All" }], ["heart", SPECS.heart], ["dental", SPECS.dental],
+    ["neuro", SPECS.neuro], ["internal", SPECS.internal], ["elderly", { ar: "كبار السن", en: "Senior care" }]
+  ];
+  const PACKAGES = [
+    { cat: "heart", img: "pk-heart", price: 45, ar: ["فحص القلب الشامل", "رسم قلب وإيكو ومجهود مع كشف استشاري وتقرير مفصل."], en: ["Complete heart check-up", "ECG, echo and stress test with a consultant visit and full report."] },
+    { cat: "heart", img: "pk-pressure", price: 10, ar: ["متابعة ضغط الدم", "قياسات دورية وضبط العلاج مع نظام غذائي مناسب لحالتك."], en: ["Blood pressure follow-up", "Regular readings and medication adjustment with a tailored diet plan."] },
+    { cat: "dental", img: "pk-braces", price: 300, ar: ["تقويم الأسنان الشفاف", "تقويم غير ظاهر بخطة علاج رقمية ومتابعة شهرية."], en: ["Clear teeth aligners", "Invisible aligners with a digital treatment plan and monthly check-ins."] },
+    { cat: "dental", img: "pk-dental", price: 20, ar: ["تنظيف وتلميع الأسنان", "إزالة الجير والتصبغات مع فحص شامل للفم واللثة."], en: ["Teeth cleaning & polish", "Tartar and stain removal with a full mouth and gum exam."] },
+    { cat: "neuro", img: "pk-neuro", price: 35, ar: ["فحص المخ والأعصاب", "تقييم الصداع والدوخة والتنميل مع رسم أعصاب عند الحاجة."], en: ["Neurology assessment", "Evaluation of headaches, dizziness and numbness, with nerve studies if needed."] },
+    { cat: "internal", img: "pk-vaccine", price: 8, ar: ["التطعيمات الموسمية", "تطعيم الإنفلونزا والتطعيمات الأساسية للكبار في دقائق."], en: ["Seasonal vaccinations", "Flu shots and essential adult vaccines in minutes."] },
+    { cat: "internal", img: "pk-checkup", price: 30, ar: ["الفحص الطبي السنوي", "كشف باطنة وتحاليل دم شاملة وصورة قلب في زيارة واحدة."], en: ["Annual medical check-up", "Internal medicine visit, full blood tests and ECG in one visit."] },
+    { cat: "elderly", img: "pk-elderly", price: 25, ar: ["رعاية كبار السن", "متابعة دورية للأمراض المزمنة والأدوية مع زيارة منزلية شهرية."], en: ["Senior care plan", "Regular chronic-condition and medication follow-up with a monthly home visit."] }
+  ];
+  const FAQ_N = 7;
+  let activeCat = "all";
+
+  function render() {
+    const S = window.SHIFA, L = S.state.lang, t = S.t;
+    // specialty select
+    document.getElementById("spec-select").innerHTML =
+      `<option value="">${t("hero.spec")}</option>` + Object.entries(SPECS).map(([k, v]) => `<option value="${k}">${v[L]}</option>`).join("");
+    // doctors
+    document.getElementById("doc-track").innerHTML = DOCTORS.slice(0, 6).map(d => window.SHIFA_DATA.doctorCard(d)).join("");
+    // packages
+    document.getElementById("pk-pills").innerHTML = CATS.map(([k, v]) =>
+      `<button role="tab" class="${k === activeCat ? "on" : ""}" aria-selected="${k === activeCat}" data-cat="${k}">${v[L]}</button>`).join("");
+    document.getElementById("pk-grid").innerHTML = PACKAGES.map(p => `
+      <article class="pk-card" ${activeCat !== "all" && p.cat !== activeCat ? "hidden" : ""}>
+        <img src="assets/img/${p.img}.jpg" alt="">
+        <div class="pk-body">
+          <h3>${p[L][0]}</h3><p>${p[L][1]}</p>
+          <div class="pk-foot"><span class="from">${t("pk.from")} <b>${S.formatPrice(p.price)}</b></span><a class="btn btn-cta" href="booking.html">${t("pk.book")}</a></div>
+        </div>
+      </article>`).join("");
+    // faq
+    document.getElementById("faq-list").innerHTML = Array.from({ length: FAQ_N }, (_, i) => `
+      <details class="faq-item" ${i === 0 ? "open" : ""}><summary>${t("q" + (i + 1))}${IC.chev}</summary><p>${t("a" + (i + 1))}</p></details>`).join("");
+  }
+
+  document.addEventListener("shifa:apply", render);
+  document.addEventListener("click", (e) => {
+    const pill = e.target.closest("[data-cat]");
+    if (pill) { activeCat = pill.dataset.cat; render(); return; }
+    const arrow = e.target.closest("[data-scroll]");
+    if (arrow) {
+      const track = document.getElementById("doc-track");
+      const dir = (document.documentElement.dir === "rtl" ? -1 : 1) * parseInt(arrow.dataset.scroll, 10);
+      track.scrollBy({ left: dir * track.clientWidth, behavior: "smooth" });
+    }
+  });
+})();
+</script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

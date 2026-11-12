@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الأقسام | مستشفى الشفاء التخصصي</title>
+<meta name="description" content="الأقسام الطبية ومراكز الخدمة في مستشفى الشفاء التخصصي.">
+<link rel="icon" href="assets/img/logo-icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/home.css">
+<link rel="stylesheet" href="assets/css/doctors.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+<script>
+window.SHIFA_I18N = {
+  ar: {
+    "page.title": "الأقسام",
+    "dp.title": "الأقسام الطبية",
+    "dp.sub": "12 قسم متخصص تحت سقف واحد، بفريق من الاستشاريين والأخصائيين وأحدث الأجهزة. اختار القسم وشوف أطباءه أو احجز على طول.",
+    "dp.list": "اختار القسم المناسب لحالتك",
+    "dp.team": "طبيب في القسم", "dp.doctors": "الأطباء", "dp.book": "احجز الآن",
+    "fc.title": "مراكز وخدمات المستشفى",
+    "fc.sub": "خدمات مساندة شغالة على مدار اليوم عشان رحلة علاجك تكمل في نفس المكان.",
+    "fc1.t": "غرف العمليات", "fc1.p": "8 غرف عمليات مجهزة للجراحات الكبرى والمناظير، مع فريق تخدير متخصص.",
+    "fc2.t": "الأقسام الداخلية", "fc2.p": "220 سرير في غرف فردية ومزدوجة، مع تمريض متواصل ومتابعة يومية من الطبيب.",
+    "fc3.t": "الجراحة والعناية المركزة", "fc3.p": "عناية مركزة للكبار والقلب وحضانات للأطفال المبتسرين بأحدث أجهزة المراقبة.",
+    "fc4.t": "الأشعة التشخيصية", "fc4.p": "رنين مغناطيسي وأشعة مقطعية وسونار وماموجرام، والتقرير بيوصلك على الموبايل.",
+    "fc5.t": "المعامل والتحاليل", "fc5.p": "أكثر من 900 نوع تحليل، وسحب العينات في المستشفى أو في البيت.",
+    "fc6.t": "الصيدلية", "fc6.p": "صيدلية داخلية بتصرف الروشتة مباشرة بعد الكشف، مع توصيل للبيت.",
+    "h.24": "شغالة 24 ساعة", "h.day": "يوميًا 8 ص – 11 م"
+  },
+  en: {
+    "page.title": "Departments",
+    "dp.title": "Medical departments",
+    "dp.sub": "12 specialized departments under one roof, staffed by consultants and specialists with modern equipment. Pick a department to see its doctors or book straight away.",
+    "dp.list": "Choose the right department for you",
+    "dp.team": "doctors in this department", "dp.doctors": "Doctors", "dp.book": "Book now",
+    "fc.title": "Hospital centers & services",
+    "fc.sub": "Support services that run around the clock so your whole treatment happens in one place.",
+    "fc1.t": "Operating theaters", "fc1.p": "8 theaters equipped for major and endoscopic surgery, with a dedicated anesthesia team.",
+    "fc2.t": "Inpatient wards", "fc2.p": "220 beds in single and shared rooms, with round-the-clock nursing and daily doctor rounds.",
+    "fc3.t": "Surgery & intensive care", "fc3.p": "Adult and cardiac ICUs plus a NICU for premature babies, with modern monitoring.",
+    "fc4.t": "Diagnostic radiology", "fc4.p": "MRI, CT, ultrasound and mammography, with reports sent to your phone.",
+    "fc5.t": "Labs & tests", "fc5.p": "Over 900 test types, with samples taken at the hospital or at home.",
+    "fc6.t": "Pharmacy", "fc6.p": "An in-house pharmacy fills your prescription right after your visit, with home delivery.",
+    "h.24": "Open 24 hours", "h.day": "Daily 8 AM – 11 PM"
+  }
+};
+</script>
+</head>
+<body data-page="departments">
+<header id="site-header"></header>
+
+<main>
+  <section class="page-head simple">
+    <div class="container">
+      <h1 data-i18n="dp.title"></h1>
+      <p data-i18n="dp.sub"></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="block-title" data-i18n="dp.list"></h2>
+      <div class="spec-grid" id="spec-grid" style="margin-top:28px"></div>
+    </div>
+  </section>
+
+  <section class="section section--grey">
+    <div class="container">
+      <h2 class="block-title" data-i18n="fc.title"></h2>
+      <p class="block-sub" data-i18n="fc.sub"></p>
+      <div class="fac-grid">
+        <article class="fac-card"><img src="assets/img/fc-or.jpg" alt=""><div class="fac-body"><h3 data-i18n="fc1.t"></h3><p data-i18n="fc1.p"></p><span class="hours" data-hours="24"></span></div></article>
+        <article class="fac-card"><img src="assets/img/fc-ward.jpg" alt=""><div class="fac-body"><h3 data-i18n="fc2.t"></h3><p data-i18n="fc2.p"></p><span class="hours" data-hours="24"></span></div></article>
+        <article class="fac-card"><img src="assets/img/fc-surgery.jpg" alt=""><div class="fac-body"><h3 data-i18n="fc3.t"></h3><p data-i18n="fc3.p"></p><span class="hours" data-hours="24"></span></div></article>
+        <article class="fac-card"><img src="assets/img/sv-xray.jpg" alt=""><div class="fac-body"><h3 data-i18n="fc4.t"></h3><p data-i18n="fc4.p"></p><span class="hours" data-hours="24"></span></div></article>
+        <article class="fac-card"><img src="assets/img/sv-lab.jpg" alt=""><div class="fac-body"><h3 data-i18n="fc5.t"></h3><p data-i18n="fc5.p"></p><span class="hours" data-hours="day"></span></div></article>
+        <article class="fac-card"><img src="assets/img/sv-pharmacy.jpg" alt=""><div class="fac-body"><h3 data-i18n="fc6.t"></h3><p data-i18n="fc6.p"></p><span class="hours" data-hours="24"></span></div></article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer"></footer>
+
+<script src="assets/js/data.js"></script>
+<script>
+(function () {
+  const { SPECS, SPEC_INFO, SPEC_ICONS } = window.SHIFA_DATA;
+  const users = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6.5 6.5-6.5s6.5 2.9 6.5 6.5"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 13.8c2.1.8 3.5 3 3.5 6.2"/></svg>';
+  const clock = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>';
+  document.addEventListener("shifa:apply", () => {
+    const S = window.SHIFA, L = S.state.lang, t = S.t;
+    document.getElementById("spec-grid").innerHTML = Object.entries(SPECS).map(([k, v]) => `
+      <article class="spec-card">
+        <div class="spec-icon">${SPEC_ICONS[k]}</div>
+        <h3>${v[L]}</h3>
+        <p>${SPEC_INFO[k][L]}</p>
+        <div class="spec-meta">${users}<span><b>${SPEC_INFO[k].team}</b> ${t("dp.team")}</span></div>
+        <div class="spec-actions">
+          <a class="btn btn-outline" href="doctors.html?spec=${k}">${t("dp.doctors")}</a>
+          <a class="btn btn-cta" href="booking.html?spec=${k}">${t("dp.book")}</a>
+        </div>
+      </article>`).join("");
+    document.querySelectorAll("[data-hours]").forEach(el => { el.innerHTML = clock + t(el.dataset.hours === "24" ? "h.24" : "h.day"); });
+  });
+})();
+</script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

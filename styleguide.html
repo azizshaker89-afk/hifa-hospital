@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الهوية البصرية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>
+window.SHIFA_I18N = {
+  ar: { "page.title": "الهوية البصرية", "sg.title": "الهوية البصرية للموقع", "sg.sub": "الشعار والألوان والخطوط والأزرار والحقول التي ستُبنى بها كل صفحات الموقع.",
+        "sg.logo": "الشعار", "sg.colors": "الألوان", "sg.type": "الخطوط", "sg.buttons": "الأزرار", "sg.inputs": "الحقول",
+        "c.primary": "سماوي", "c.navy": "كحلي", "c.cta": "أخضر الحجز", "c.bg": "خلفية", "c.text": "نص",
+        "t.h1": "رعاية طبية متكاملة", "t.h2": "أطباؤنا المتميزون", "t.body": "نخبة من الاستشاريين في جميع التخصصات لخدمتك على مدار الساعة.", "t.muted": "نص ثانوي للوصف والتفاصيل",
+        "b.call": "اتصل بنا", "b.more": "عرض الكل", "b.cancel": "إلغاء",
+        "f.name": "اسم المريض", "f.name.ph": "اكتب اسم المريض", "f.spec": "اختار التخصص", "price.label": "سعر الكشف" },
+  en: { "page.title": "Brand Identity", "sg.title": "Website Brand Identity", "sg.sub": "The logo, colors, typography, buttons and fields every page of the site will be built with.",
+        "sg.logo": "Logo", "sg.colors": "Colors", "sg.type": "Typography", "sg.buttons": "Buttons", "sg.inputs": "Fields",
+        "c.primary": "Sky blue", "c.navy": "Navy", "c.cta": "Booking green", "c.bg": "Background", "c.text": "Text",
+        "t.h1": "Complete Medical Care", "t.h2": "Our Outstanding Doctors", "t.body": "A team of consultants across every specialty, at your service around the clock.", "t.muted": "Secondary text for descriptions and details",
+        "b.call": "Call Us", "b.more": "View All", "b.cancel": "Cancel",
+        "f.name": "Patient name", "f.name.ph": "Enter the patient's name", "f.spec": "Choose a specialty", "price.label": "Consultation fee" }
+};
+</script>
+</head>
+<body data-page="">
+<header id="site-header"></header>
+
+<main>
+  <section class="section section--grey">
+    <div class="container">
+      <h1 class="section-title" data-i18n="sg.title"></h1>
+      <p class="section-sub" data-i18n="sg.sub"></p>
+
+      <div class="sg-card" style="margin-bottom:24px">
+        <h3 data-i18n="sg.logo"></h3>
+        <div class="logo-showcase">
+          <div class="on-light"><div class="logo logo-big"><img src="assets/img/logo-icon.svg" alt=""><span class="logo-text"><span class="logo-name" data-i18n-html="brand.name"></span><span class="logo-tag" data-i18n="brand.tag"></span></span></div></div>
+          <div class="on-dark"><div class="logo logo-big"><img src="assets/img/logo-icon.svg" alt=""><span class="logo-text"><span class="logo-name" data-i18n-html="brand.name"></span><span class="logo-tag" data-i18n="brand.tag"></span></span></div></div>
+        </div>
+      </div>
+
+      <div class="sg-grid">
+        <div class="sg-card">
+          <h3 data-i18n="sg.colors"></h3>
+          <div class="swatches">
+            <div class="swatch"><i style="background:var(--primary)"></i><span data-i18n="c.primary"></span></div>
+            <div class="swatch"><i style="background:var(--navy)"></i><span data-i18n="c.navy"></span></div>
+            <div class="swatch"><i style="background:var(--cta)"></i><span data-i18n="c.cta"></span></div>
+            <div class="swatch"><i style="background:var(--bg);border:1px solid var(--border)"></i><span data-i18n="c.bg"></span></div>
+            <div class="swatch"><i style="background:var(--text)"></i><span data-i18n="c.text"></span></div>
+          </div>
+        </div>
+        <div class="sg-card">
+          <h3 data-i18n="sg.type"></h3>
+          <p class="type-h1" data-i18n="t.h1"></p>
+          <p class="type-h2" data-i18n="t.h2"></p>
+          <p class="type-body" data-i18n="t.body"></p>
+          <p class="type-muted" data-i18n="t.muted"></p>
+        </div>
+        <div class="sg-card">
+          <h3 data-i18n="sg.buttons"></h3>
+          <div class="btn-row">
+            <a class="btn btn-cta btn-lg" href="booking.html" data-i18n="cta.book"></a>
+            <a class="btn btn-primary" href="#" data-i18n="b.call"></a>
+            <a class="btn btn-outline" href="#" data-i18n="b.cancel"></a>
+          </div>
+          <p class="type-muted" style="margin-top:18px"><span data-i18n="price.label"></span>: <b style="color:var(--text)" data-price="7"></b></p>
+        </div>
+        <div class="sg-card">
+          <h3 data-i18n="sg.inputs"></h3>
+          <label class="field" style="margin-bottom:14px"><span data-i18n="f.name"></span><input class="input" data-i18n-ph="f.name.ph"></label>
+          <select class="select"><option data-i18n="f.spec"></option></select>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer"></footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

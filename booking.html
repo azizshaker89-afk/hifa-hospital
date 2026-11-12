@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>احجز موعدك | مستشفى الشفاء التخصصي</title>
+<meta name="description" content="احجز موعدك في مستشفى الشفاء التخصصي في أقل من دقيقة.">
+<link rel="icon" href="assets/img/logo-icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/home.css">
+<link rel="stylesheet" href="assets/css/doctors.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+<script>
+window.SHIFA_I18N = {
+  ar: {
+    "page.title": "احجز موعدك",
+    "bk.summary": "تفاصيل حجزك", "bk.data": "بيانات الحجز",
+    "bk.when": "ميعاد الحجز", "bk.pickTime": "اختار اليوم والساعة من الفورم",
+    "bk.pickDoc": "لسه ماخترتش الطبيب",
+    "bk.doctor": "اختار الطبيب", "bk.doctor.ph": "اختار الطبيب أو التخصص",
+    "bk.day": "اختار اليوم", "bk.time": "اختار الساعة",
+    "bk.name": "اسم المريض", "bk.name.ph": "اكتب اسم المريض",
+    "bk.phone": "اكتب رقم الموبايل", "bk.phone.ph": "اكتب رقم الموبايل",
+    "bk.email": "اكتب البريد الإلكتروني (اختياري)", "bk.email.ph": "اكتب بريدك الإلكتروني",
+    "bk.fee": "سعر الكشف", "bk.call": "اتصل بالمستشفى",
+    "bk.promo.ph": "اكتب كود الخصم", "bk.apply": "تطبيق",
+    "bk.discount": "خصم كود", "bk.total": "الإجمالي",
+    "bk.promo.ok": "تم تطبيق خصم 10% على الكشف.", "bk.promo.bad": "الكود ده مش صالح. جرّب SHIFA10.",
+    "bk.pay": "طريقة الدفع",
+    "pay.card": "بطاقة بنكية", "pay.wallet": "محفظة إلكترونية", "pay.cash": "الدفع في المستشفى", "pay.ins": "تأمين طبي",
+    "bk.submit": "احجز", "bk.cancel": "إلغاء",
+    "as.title": "بنطمنك إن…",
+    "as1": "هتتابع مع نخبة من الاستشاريين في كل التخصصات.",
+    "as2": "بياناتك الطبية سرية تمامًا ومحدش بيشوفها غير طبيبك.",
+    "as3": "تقدر تلغي أو تغيّر ميعادك مجانًا قبل الموعد بـ 6 ساعات.",
+    "as4": "لو اخترت الدفع في المستشفى، هتدفع في الاستقبال يوم الكشف.",
+    "e.doctor": "اختار الطبيب الأول.",
+    "e.time": "اختار اليوم والساعة المناسبين.",
+    "e.name": "اكتب اسم المريض بالكامل (3 حروف على الأقل).",
+    "e.phone": "اكتب رقم موبايل صحيح من 8 لـ 12 رقم.",
+    "e.email": "الإيميل مش مكتوب صح، مثال: name@mail.com",
+    "ok.title": "تم تأكيد حجزك", "ok.sub": "هتوصلك رسالة تأكيد على رقم", "ok.ref": "رقم الحجز",
+    "ok.doctor": "الطبيب", "ok.when": "الميعاد", "ok.total": "الإجمالي", "ok.pay": "طريقة الدفع",
+    "ok.home": "رجوع للرئيسية", "ok.again": "احجز موعد تاني",
+    "full": "محجوز", "pm": "م", "am": "ص"
+  },
+  en: {
+    "page.title": "Book your appointment",
+    "bk.summary": "Your booking", "bk.data": "Booking details",
+    "bk.when": "Appointment", "bk.pickTime": "Pick a day and time in the form",
+    "bk.pickDoc": "No doctor selected yet",
+    "bk.doctor": "Choose a doctor", "bk.doctor.ph": "Choose a doctor or specialty",
+    "bk.day": "Choose a day", "bk.time": "Choose a time",
+    "bk.name": "Patient name", "bk.name.ph": "Enter the patient's name",
+    "bk.phone": "Mobile number", "bk.phone.ph": "Enter your mobile number",
+    "bk.email": "Email (optional)", "bk.email.ph": "Enter your email",
+    "bk.fee": "Consultation fee", "bk.call": "Call the hospital",
+    "bk.promo.ph": "Enter a promo code", "bk.apply": "Apply",
+    "bk.discount": "Promo discount", "bk.total": "Total",
+    "bk.promo.ok": "10% off the consultation applied.", "bk.promo.bad": "That code isn't valid. Try SHIFA10.",
+    "bk.pay": "Payment method",
+    "pay.card": "Bank card", "pay.wallet": "E-wallet", "pay.cash": "Pay at the hospital", "pay.ins": "Medical insurance",
+    "bk.submit": "Book", "bk.cancel": "Cancel",
+    "as.title": "Rest assured…",
+    "as1": "You'll be seen by leading consultants in every specialty.",
+    "as2": "Your medical data is fully private and only your doctor sees it.",
+    "as3": "You can cancel or reschedule free up to 6 hours before your visit.",
+    "as4": "If you choose to pay at the hospital, you pay at reception on the day.",
+    "e.doctor": "Choose a doctor first.",
+    "e.time": "Choose a day and a time.",
+    "e.name": "Enter the patient's full name (at least 3 letters).",
+    "e.phone": "Enter a valid mobile number of 8 to 12 digits.",
+    "e.email": "That email doesn't look right, e.g. name@mail.com",
+    "ok.title": "Your appointment is booked", "ok.sub": "A confirmation text is on its way to", "ok.ref": "Booking number",
+    "ok.doctor": "Doctor", "ok.when": "Appointment", "ok.total": "Total", "ok.pay": "Payment method",
+    "ok.home": "Back to home", "ok.again": "Book another appointment",
+    "full": "Booked", "pm": "PM", "am": "AM"
+  }
+};
+</script>
+</head>
+<body data-page="">
+<header id="site-header"></header>
+
+<main class="booking">
+  <div class="container book-grid">
+    <!-- Summary column (reference: «تفاصيل حجزك») -->
+    <aside>
+      <h2 data-i18n="bk.summary"></h2>
+      <div class="sum-card">
+        <div class="sum-row" id="sum-when"></div>
+        <div class="sum-row sum-doc" id="sum-doc"></div>
+        <div class="sum-row sum-facts">
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M3 12.2V4a1 1 0 0 1 1-1h8.2a1 1 0 0 1 .7.3l8.4 8.4a1.5 1.5 0 0 1 0 2.1l-7.5 7.5a1.5 1.5 0 0 1-2.1 0L3.3 12.9a1 1 0 0 1-.3-.7Z"/><circle cx="8" cy="8" r="1.8" fill="currentColor"/></svg><span><small data-i18n="bk.fee"></small><b id="sum-fee">—</b></span></div>
+          <div><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z"/></svg><span><small data-i18n="bk.call"></small><b data-phone></b></span></div>
+        </div>
+      </div>
+      <div class="assure">
+        <h3 data-i18n="as.title"></h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg><span data-i18n="as1"></span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg><span data-i18n="as2"></span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg><span data-i18n="as3"></span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg><span data-i18n="as4"></span></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Form column (reference: «بيانات الحجز») -->
+    <section id="form-col">
+      <form id="book-form" novalidate>
+        <h2 data-i18n="bk.data"></h2>
+
+        <label class="field" id="f-doctor">
+          <span data-i18n="bk.doctor"></span>
+          <div class="select-wrap">
+            <select class="select" id="doctor"></select>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg>
+          </div>
+          <small class="err" id="e-doctor"></small>
+        </label>
+
+        <div class="field" id="f-time">
+          <span class="step-label" data-i18n="bk.day"></span>
+          <div class="chips" id="days" role="radiogroup"></div>
+          <span class="step-label" data-i18n="bk.time"></span>
+          <div class="chips" id="times" role="radiogroup" style="margin-bottom:0"></div>
+          <small class="err" id="e-time"></small>
+        </div>
+
+        <label class="field" id="f-name">
+          <span data-i18n="bk.name"></span>
+          <input class="input" id="pname" autocomplete="name" data-i18n-ph="bk.name.ph">
+          <small class="err" id="e-name"></small>
+        </label>
+
+        <label class="field" id="f-phone">
+          <span data-i18n="bk.phone"></span>
+          <div class="phone-field">
+            <input class="input" id="pphone" inputmode="tel" autocomplete="tel" data-i18n-ph="bk.phone.ph">
+            <span class="dial"><span data-current-flag></span><span id="dial"></span></span>
+          </div>
+          <small class="err" id="e-phone"></small>
+        </label>
+
+        <label class="field" id="f-email">
+          <span data-i18n="bk.email"></span>
+          <input class="input" id="pemail" type="email" autocomplete="email" data-i18n-ph="bk.email.ph">
+          <small class="err" id="e-email"></small>
+        </label>
+
+        <div class="price-box">
+          <div class="price-row"><span data-i18n="bk.fee"></span><span id="p-fee">—</span></div>
+          <div class="promo">
+            <input class="input" id="promo" autocomplete="off" data-i18n-ph="bk.promo.ph">
+            <button class="btn btn-primary" type="button" id="apply" data-i18n="bk.apply"></button>
+          </div>
+          <p class="promo-msg" id="promo-msg" hidden></p>
+          <div class="price-row discount" id="p-disc-row" hidden><span data-i18n="bk.discount"></span><span id="p-disc"></span></div>
+          <div class="price-row total" style="margin-top:12px"><span data-i18n="bk.total"></span><span id="p-total">—</span></div>
+        </div>
+
+        <span class="step-label" data-i18n="bk.pay"></span>
+        <div class="pay-grid" id="pay"></div>
+
+        <div class="form-actions">
+          <button class="btn btn-cta" type="submit" data-i18n="bk.submit"></button>
+          <a class="btn btn-outline" href="doctors.html" data-i18n="bk.cancel"></a>
+        </div>
+      </form>
+      <div id="success" hidden></div>
+    </section>
+  </div>
+</main>
+
+<footer id="site-footer"></footer>
+
+<script src="assets/js/data.js"></script>
+<script>
+(function () {
+  const { SPECS, DOCTORS, SLOT_DT, TODAY } = window.SHIFA_DATA;
+  const qs = new URLSearchParams(location.search);
+  const TIMES = ["10:00", "11:00", "12:30", "14:00", "16:00", "17:10", "18:00", "19:00", "20:30"];
+  const NOW = "16:30"; // times earlier than this are already past today
+  const PAY = {
+    card: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19M6 15h4"/></svg>',
+    wallet: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2.5" width="16" height="19" rx="3"/><path d="M10 18.5h4"/><path d="M8.5 9.5l2.5 2.5 4.5-4.5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    cash: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V9l9-6 9 6v12z" stroke-linejoin="round"/><path d="M12 10v8M8 14h8" stroke-linecap="round"/></svg>',
+    ins: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 2.5 4 5.5v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10v-6z"/><path d="m8.5 12 2.5 2.5 4.5-5" stroke-linecap="round"/></svg>'
+  };
+  const tick = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>';
+
+  // initial selection from the link that opened the page
+  const fromDoc = DOCTORS.find(d => d.id === qs.get("doctor"));
+  const fromSpec = SPECS[qs.get("spec")] ? DOCTORS.find(d => d.spec === qs.get("spec")) : null;
+  const st = { doctor: (fromDoc || fromSpec || {}).id || "", day: 0, time: "", pay: "card", promo: false, done: false };
+  const slotIdx = parseInt(qs.get("slot"), 10);
+  if (fromDoc && SLOT_DT[slotIdx]) { st.day = SLOT_DT[slotIdx][0]; st.time = SLOT_DT[slotIdx][1]; }
+
+  const doc = () => DOCTORS.find(d => d.id === st.doctor);
+  const dayDate = (i) => new Date(TODAY.getFullYear(), TODAY.getMonth(), TODAY.getDate() + i);
+  const isFriday = (i) => dayDate(i).getDay() === 5;
+  function fmtDay(i, withYear) {
+    const L = window.SHIFA.state.lang, d = dayDate(i);
+    if (L === "ar") {
+      const wd = ["الأحد", "الاثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة", "السبت"][d.getDay()];
+      return `${wd} ${d.getDate()} نوفمبر${withYear ? " " + d.getFullYear() : ""}`;
+    }
+    return d.toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short", year: withYear ? "numeric" : undefined });
+  }
+  function fmtTime(t) {
+    let [h, m] = t.split(":").map(Number); const pm = h >= 12; h = h % 12 || 12;
+    return `${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")} ${window.SHIFA.t(pm ? "pm" : "am")}`;
+  }
+  // a few slots are already taken, deterministically per doctor/day; the doctor's advertised slots stay open
+  function taken(i, t) {
+    if (i === 0 && t < NOW) return true;
+    if (isFriday(i) && t < "14:00") return true;
+    const d = doc(); if (!d) return false;
+    if ([d.slot, ...d.times].some(s => SLOT_DT[s][0] === i && SLOT_DT[s][1] === t)) return false;
+    const h = (d.id.charCodeAt(0) * 7 + i * 13 + TIMES.indexOf(t) * 5) % 9;
+    return h < 2;
+  }
+  // amounts in local currency: discount is 10% of the shown fee, so fee − discount = total exactly
+  const feeLocal = () => { const d = doc(); return d ? window.SHIFA.localAmount(d.fee) : 0; };
+  const discLocal = () => st.promo ? Math.round(feeLocal() * 0.1 * 100) / 100 : 0;
+  const totalLocal = () => feeLocal() - discLocal();
+
+  function renderStatic() {
+    const S = window.SHIFA, L = S.state.lang, t = S.t;
+    const opts = Object.entries(SPECS).map(([k, v]) => {
+      const ds = DOCTORS.filter(d => d.spec === k); if (!ds.length) return "";
+      return `<optgroup label="${v[L]}">${ds.map(d => `<option value="${d.id}" ${d.id === st.doctor ? "selected" : ""}>${d[L].n}</option>`).join("")}</optgroup>`;
+    }).join("");
+    document.getElementById("doctor").innerHTML = `<option value="">${t("bk.doctor.ph")}</option>` + opts;
+    document.getElementById("pay").innerHTML = ["card", "wallet", "cash", "ins"].map(k => `
+      <label class="pay-opt"><input type="radio" name="pay" value="${k}" ${k === st.pay ? "checked" : ""}>
+        <span class="box">${tick}</span><span>${t("pay." + k)}</span><span class="pay-ic">${PAY[k]}</span></label>`).join("");
+    document.getElementById("dial").textContent = S.COUNTRIES[S.state.country].dial;
+  }
+
+  function renderDynamic() {
+    const S = window.SHIFA, L = S.state.lang, t = S.t, d = doc();
+    // chips
+    document.getElementById("days").innerHTML = Array.from({ length: 6 }, (_, i) => {
+      const dd = dayDate(i), parts = fmtDay(i).split(" ");
+      return `<button type="button" role="radio" class="chip ${i === st.day ? "on" : ""}" aria-checked="${i === st.day}" data-day="${i}">${parts[0].replace(",", "")}<small>${parts.slice(1).join(" ")}</small></button>`;
+    }).join("");
+    if (st.time && taken(st.day, st.time)) st.time = "";
+    document.getElementById("times").innerHTML = TIMES.map(tm => {
+      const off = taken(st.day, tm);
+      return `<button type="button" role="radio" class="chip ${tm === st.time ? "on" : ""}" aria-checked="${tm === st.time}" data-time="${tm}" ${off ? "disabled" : ""}>${fmtTime(tm)}${off ? `<small>${t("full")}</small>` : ""}</button>`;
+    }).join("");
+    // summary
+    document.getElementById("sum-when").innerHTML = st.time
+      ? `<b>${t("bk.when")}</b> ${fmtDay(st.day, true)} | ${fmtTime(st.time)}`
+      : `<b>${t("bk.when")}</b> <span style="color:var(--muted)">${t("bk.pickTime")}</span>`;
+    const sd = document.getElementById("sum-doc");
+    sd.classList.toggle("empty", !d);
+    sd.innerHTML = d
+      ? `<img src="assets/img/dr-${d.id}.jpg" alt=""><div><div class="doc-name">${d[L].n}</div><p class="doc-spec">${d[L].s}</p></div>`
+      : `<span>${t("bk.pickDoc")}</span>`;
+    const fee = d ? S.formatPrice(d.fee) : "—";
+    document.getElementById("sum-fee").textContent = fee;
+    document.getElementById("p-fee").textContent = fee;
+    document.getElementById("p-disc-row").hidden = !(st.promo && d);
+    if (st.promo && d) document.getElementById("p-disc").textContent = "− " + S.formatLocal(discLocal());
+    document.getElementById("p-total").textContent = d ? S.formatLocal(totalLocal()) : "—";
+  }
+
+  function setErr(key, msg) {
+    document.getElementById("e-" + key).textContent = msg || "";
+    document.getElementById("f-" + key).classList.toggle("invalid", !!msg);
+  }
+
+  function validate() {
+    const t = window.SHIFA.t;
+    const name = document.getElementById("pname").value.trim();
+    const phone = document.getElementById("pphone").value.replace(/[\s-]/g, "");
+    const email = document.getElementById("pemail").value.trim();
+    const errs = {
+      doctor: st.doctor ? "" : t("e.doctor"),
+      time: st.time ? "" : t("e.time"),
+      name: name.length >= 3 ? "" : t("e.name"),
+      phone: /^\d{8,12}$/.test(phone) ? "" : t("e.phone"),
+      email: !email || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ? "" : t("e.email")
+    };
+    Object.entries(errs).forEach(([k, v]) => setErr(k, v));
+    const first = Object.keys(errs).find(k => errs[k]);
+    if (first) document.getElementById("f-" + first).scrollIntoView({ behavior: "smooth", block: "center" });
+    return !first;
+  }
+
+  function showSuccess() {
+    const S = window.SHIFA, L = S.state.lang, t = S.t, d = doc();
+    const phone = document.getElementById("pphone").value.replace(/[\s-]/g, "");
+    const ref = "SH-" + (1112) + "-" + String((d.id.length * 1373 + st.day * 97 + TIMES.indexOf(st.time) * 31) % 9000 + 1000);
+    document.getElementById("book-form").hidden = true;
+    const box = document.getElementById("success");
+    box.hidden = false;
+    box.innerHTML = `
+      <div class="success">
+        <div class="tick">${tick}</div>
+        <h2>${t("ok.title")}</h2>
+        <p>${t("ok.sub")} <bdi dir="ltr">${S.COUNTRIES[S.state.country].dial} ${phone}</bdi></p>
+        <div class="ref">${t("ok.ref")}: ${ref}</div>
+        <dl>
+          <dt>${t("ok.doctor")}</dt><dd>${d[L].n}</dd>
+          <dt>${t("ok.when")}</dt><dd>${fmtDay(st.day, true)} | ${fmtTime(st.time)}</dd>
+          <dt>${t("ok.total")}</dt><dd>${S.formatLocal(totalLocal())}</dd>
+          <dt>${t("ok.pay")}</dt><dd>${t("pay." + st.pay)}</dd>
+        </dl>
+        <div class="btn-row">
+          <a class="btn btn-cta btn-lg" href="booking.html">${t("ok.again")}</a>
+          <a class="btn btn-outline btn-lg" href="index.html">${t("ok.home")}</a>
+        </div>
+      </div>`;
+    box.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  document.addEventListener("shifa:apply", () => {
+    renderStatic(); renderDynamic();
+    if (st.done) showSuccess();
+    const m = document.getElementById("promo-msg");
+    if (!m.hidden) m.textContent = window.SHIFA.t(m.classList.contains("ok") ? "bk.promo.ok" : "bk.promo.bad");
+  });
+  document.getElementById("doctor").addEventListener("change", (e) => { st.doctor = e.target.value; setErr("doctor", ""); renderDynamic(); });
+  document.addEventListener("click", (e) => {
+    const day = e.target.closest("[data-day]");
+    if (day) { st.day = +day.dataset.day; renderDynamic(); return; }
+    const tm = e.target.closest("[data-time]");
+    if (tm && !tm.disabled) { st.time = tm.dataset.time; setErr("time", ""); renderDynamic(); }
+  });
+  document.getElementById("pay").addEventListener("change", (e) => { st.pay = e.target.value; });
+  document.getElementById("apply").addEventListener("click", () => {
+    const code = document.getElementById("promo").value.trim().toUpperCase();
+    const m = document.getElementById("promo-msg");
+    st.promo = code === "SHIFA10";
+    m.hidden = false;
+    m.className = "promo-msg " + (st.promo ? "ok" : "bad");
+    m.textContent = window.SHIFA.t(st.promo ? "bk.promo.ok" : "bk.promo.bad");
+    renderDynamic();
+  });
+  ["pname", "pphone", "pemail"].forEach(id => document.getElementById(id).addEventListener("input", () => setErr(id === "pname" ? "name" : id === "pphone" ? "phone" : "email", "")));
+  document.getElementById("book-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (validate()) { st.done = true; showSuccess(); }
+  });
+})();
+</script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

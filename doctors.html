@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الأطباء | مستشفى الشفاء التخصصي</title>
+<meta name="description" content="ابحث عن طبيبك في مستشفى الشفاء التخصصي واحجز أقرب ميعاد متاح.">
+<link rel="icon" href="assets/img/logo-icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/home.css">
+<link rel="stylesheet" href="assets/css/doctors.css">
+<script>
+window.SHIFA_I18N = {
+  ar: {
+    "page.title": "الأطباء",
+    "dl.title": "أطباء مستشفى الشفاء",
+    "dl.sub": "أكثر من 120 استشاري وأخصائي في 12 تخصص. اختار الطبيب وشوف أقرب ميعاد متاح واحجز في أقل من دقيقة.",
+    "dl.name": "ابحث باسم الطبيب", "dl.sort": "ترتيب النتائج",
+    "sort.rating": "الأعلى تقييمًا", "sort.price": "الأقل سعرًا", "sort.views": "الأكثر زيارة",
+    "dl.search": "ابحث", "dl.all": "كل التخصصات",
+    "dl.count": "طبيب متاح للحجز", "dl.clear": "امسح البحث",
+    "dl.empty.t": "مفيش أطباء بالاسم ده في التخصص المختار",
+    "dl.empty.p": "جرّب تكتب جزء من الاسم، أو اختار «كل التخصصات»."
+  },
+  en: {
+    "page.title": "Doctors",
+    "dl.title": "Al Shifa doctors",
+    "dl.sub": "Over 120 consultants and specialists across 12 specialties. Pick a doctor, see the earliest open slot and book in under a minute.",
+    "dl.name": "Search by doctor name", "dl.sort": "Sort results",
+    "sort.rating": "Highest rated", "sort.price": "Lowest fee", "sort.views": "Most visited",
+    "dl.search": "Search", "dl.all": "All specialties",
+    "dl.count": "doctors available to book", "dl.clear": "Clear search",
+    "dl.empty.t": "No doctors match that name in this specialty",
+    "dl.empty.p": "Try part of the name, or choose “All specialties”."
+  }
+};
+</script>
+</head>
+<body data-page="doctors">
+<header id="site-header"></header>
+
+<main>
+  <section class="page-head">
+    <div class="container">
+      <h1 data-i18n="dl.title"></h1>
+      <p data-i18n="dl.sub"></p>
+      <form class="filter-card" id="filter-form">
+        <label class="input-icon">
+          <span class="sr-only" data-i18n="dl.name"></span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input class="input" id="q" type="search" autocomplete="off" data-i18n-ph="dl.name">
+        </label>
+        <div class="select-wrap">
+          <select class="select" id="sort" data-i18n-aria="dl.sort"></select>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg>
+        </div>
+        <button class="btn btn-cta" type="submit" data-i18n="dl.search"></button>
+      </form>
+    </div>
+  </section>
+
+  <section class="doctors-list">
+    <div class="container">
+      <div class="pills" id="spec-pills" role="tablist"></div>
+      <div class="results-bar">
+        <p id="count"></p>
+      </div>
+      <div class="doc-grid" id="doc-grid"></div>
+      <div class="empty-state" id="empty" hidden>
+        <h3 data-i18n="dl.empty.t"></h3>
+        <p data-i18n="dl.empty.p"></p>
+        <button class="btn btn-primary" type="button" id="clear" data-i18n="dl.clear"></button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer"></footer>
+
+<script src="assets/js/data.js"></script>
+<script>
+(function () {
+  const { SPECS, DOCTORS, doctorCard } = window.SHIFA_DATA;
+  const params = new URLSearchParams(location.search);
+  const state = { spec: SPECS[params.get("spec")] ? params.get("spec") : "all", q: "", sort: "rating" };
+
+  function renderControls() {
+    const S = window.SHIFA, L = S.state.lang, t = S.t;
+    document.getElementById("spec-pills").innerHTML =
+      [["all", { ar: t("dl.all"), en: t("dl.all") }], ...Object.entries(SPECS)].map(([k, v]) =>
+        `<button type="button" role="tab" data-spec="${k}" class="${k === state.spec ? "on" : ""}" aria-selected="${k === state.spec}">${v[L]}</button>`).join("");
+    document.getElementById("sort").innerHTML = ["rating", "price", "views"].map(k =>
+      `<option value="${k}" ${k === state.sort ? "selected" : ""}>${t("sort." + k)}</option>`).join("");
+  }
+
+  function renderList() {
+    const S = window.SHIFA, t = S.t;
+    const q = state.q.trim().toLowerCase();
+    let list = DOCTORS.filter(d =>
+      (state.spec === "all" || d.spec === state.spec) &&
+      (!q || d.ar.n.includes(q) || d.en.n.toLowerCase().includes(q)));
+    list.sort((a, b) => state.sort === "price" ? a.fee - b.fee : state.sort === "views" ? b.views - a.views : b.rating - a.rating);
+    document.getElementById("doc-grid").innerHTML = list.map(d => doctorCard(d)).join("");
+    document.getElementById("count").innerHTML = `<b>${list.length}</b> ${t("dl.count")}`;
+    document.getElementById("empty").hidden = list.length > 0;
+  }
+
+  document.addEventListener("shifa:apply", () => { renderControls(); renderList(); });
+  document.addEventListener("click", (e) => {
+    const pill = e.target.closest("[data-spec]");
+    if (pill) {
+      state.spec = pill.dataset.spec;
+      document.querySelectorAll("#spec-pills button").forEach(b => { const on = b.dataset.spec === state.spec; b.classList.toggle("on", on); b.setAttribute("aria-selected", on); });
+      renderList();
+    }
+    if (e.target.id === "clear") { state.spec = "all"; state.q = ""; document.getElementById("q").value = ""; renderControls(); renderList(); }
+  });
+  document.getElementById("q").addEventListener("input", (e) => { state.q = e.target.value; renderList(); });
+  document.getElementById("sort").addEventListener("change", (e) => { state.sort = e.target.value; renderList(); });
+  document.getElementById("filter-form").addEventListener("submit", (e) => { e.preventDefault(); state.q = document.getElementById("q").value; renderList(); });
+})();
+</script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
